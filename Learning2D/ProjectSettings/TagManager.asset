@@ -9,6 +9,7 @@ TagManager:
   - Kiwi
   - DauTay
   - Bat
+  - MuiTen
   layers:
   - Default
   - TransparentFX

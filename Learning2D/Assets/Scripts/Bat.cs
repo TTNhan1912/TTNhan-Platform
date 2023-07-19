@@ -12,6 +12,7 @@ public class Bat : MonoBehaviour
     private bool nhayDoi;
     public Transform ViTri_Nhay;
     public LayerMask san;
+    [SerializeField] private float bay;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,12 @@ public class Bat : MonoBehaviour
         if (collision.gameObject.CompareTag("Bat"))
         {
             Jumpppp();
+        }
+        if (collision.gameObject.CompareTag("MuiTen"))
+        {
+            rb.AddForce(new Vector2(0, bay));
+
+            Destroy(collision.gameObject);
         }
         
     }
