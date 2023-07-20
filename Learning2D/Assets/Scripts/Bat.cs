@@ -39,7 +39,6 @@ public class Bat : MonoBehaviour
         if (collision.gameObject.CompareTag("MuiTen"))
         {
             rb.AddForce(new Vector2(0, bay));
-
             Destroy(collision.gameObject);
         }
         
