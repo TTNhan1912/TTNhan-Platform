@@ -111,6 +111,7 @@ public class ForgotPass : MonoBehaviour
             RegisterRespnseModel scoreResponseModel = JsonConvert.DeserializeObject<RegisterRespnseModel>(jsonString);
             if (scoreResponseModel.status == 1)
             {
+                Debug.Log(scoreResponseModel.status);
                 reset.SetActive(false);
                 login.SetActive(true);
             }
