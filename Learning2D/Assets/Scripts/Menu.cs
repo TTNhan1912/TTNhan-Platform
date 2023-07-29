@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private GameObject menu;
+    [SerializeField] private GameObject huongDan;
+
     private bool isMenu = false;
     // Start is called before the first frame update
     void Start()
@@ -16,7 +18,13 @@ public class Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
+
+
+
+
+
         /*if (Input.GetKeyDown(KeyCode.P)){ 
             if (!isMenu)
             {
@@ -57,4 +65,11 @@ public class Menu : MonoBehaviour
             Time.timeScale = 1;
         }
     }
+    public void HuongDanChoi()
+    {
+          huongDan.SetActive(false);
+    }
+   
+
+  
 }

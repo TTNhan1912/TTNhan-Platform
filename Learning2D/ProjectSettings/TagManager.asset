@@ -10,6 +10,7 @@ TagManager:
   - DauTay
   - Bat
   - MuiTen
+  - Save
   layers:
   - Default
   - TransparentFX

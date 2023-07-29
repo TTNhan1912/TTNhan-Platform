@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
     private bool nhayDoi;
     public LayerMask san;
 
+    [SerializeField] private GameObject thongBao;
+    [SerializeField] private GameObject menu;
+
+
 
     /*private float horizontalInput, forwardInput;*/
 
@@ -49,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(driX * speed,rb.velocity.y );
 
 
-        nhay = Physics2D.OverlapCircle(ViTri_Nhay.position, 0.2f, san);
+        nhay = Physics2D.OverlapCircle(ViTri_Nhay.position, 0.5f, san);
 
         if (nhay && !Input.GetKey(KeyCode.Space))
         {
@@ -64,7 +68,25 @@ public class PlayerMovement : MonoBehaviour
                 nhayDoi = !nhayDoi;
             }
         }
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            thongBao.SetActive(false);
+        }
+        // ấn giữ TAB để hiện map
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            menu.SetActive(true);
+            Time.timeScale = 0;
+
+        }
+        else 
+        {
+            menu.SetActive(false);
+            Time.timeScale = 1;
+
+        }
+
+
 
 
         UpdateAnimation();
