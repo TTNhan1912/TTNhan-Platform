@@ -1,7 +1,12 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.SocialPlatforms.Impl;
+using static Cinemachine.CinemachineTargetGroup;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject thongBao;
     [SerializeField] private GameObject menu;
 
+    
 
 
     /*private float horizontalInput, forwardInput;*/
@@ -40,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         ani = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
+
 
 
     }
@@ -134,6 +141,9 @@ public class PlayerMovement : MonoBehaviour
     {
        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumbableGround);
     }
+
+
+
 
 
 }
