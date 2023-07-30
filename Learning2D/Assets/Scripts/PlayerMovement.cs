@@ -33,8 +33,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private GameObject thongBao;
     [SerializeField] private GameObject menu;
 
-    
 
+    public ParticleSystem Bui;
 
     /*private float horizontalInput, forwardInput;*/
 
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
         driX = Input.GetAxisRaw("Horizontal");
         /*forwardInput = Input.GetAxis("Vertical");*/
 
-        rb.velocity = new Vector2(driX * speed,rb.velocity.y );
+        rb.velocity = new Vector2(driX * speed,rb.velocity.y  );
 
 
         nhay = Physics2D.OverlapCircle(ViTri_Nhay.position, 0.5f, san);
@@ -67,6 +67,10 @@ public class PlayerMovement : MonoBehaviour
             nhayDoi = false;
 
         }
+        else {
+            CreateBui();
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             if (nhay || nhayDoi)
@@ -144,6 +148,9 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-
+    public void CreateBui()
+    {
+        Bui.Play();
+    }
 
 }

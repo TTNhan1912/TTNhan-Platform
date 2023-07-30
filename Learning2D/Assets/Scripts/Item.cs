@@ -25,7 +25,7 @@ public class Item : MonoBehaviour
     {
 
         // tk mới tạo k có điểm
-        if (LoginUser.loginresponsemodel.score >= 0)
+        /*if (LoginUser.loginresponsemodel.score >= 0)
         {
             // load lại điểm
             cheries = LoginUser.loginresponsemodel.score;
@@ -34,9 +34,9 @@ public class Item : MonoBehaviour
             cheriesText.text = cheries + " ";
             kiwiText.text = kiwi + " ";
             daytayText.text = dautay + " ";
-        }
+        }*/
 
-        // tk mới tạo k có vị trí
+/*        // tk mới tạo k có vị trí
         if (LoginUser.loginresponsemodel.positionX != "")
         {
             // load vị trí, ép về kiểu float vì vị trí là float
@@ -45,7 +45,7 @@ public class Item : MonoBehaviour
             var posZ = float.Parse(LoginUser.loginresponsemodel.positionZ);
 
             transform.position = new Vector3(posX, posY, posZ);
-        }
+        }*/
 
     }
 

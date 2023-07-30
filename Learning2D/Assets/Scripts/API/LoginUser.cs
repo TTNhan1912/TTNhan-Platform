@@ -20,6 +20,8 @@ public class LoginUser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        edtUser.text = "trannhan2552@gmail.com";
+        edtPass.text = "123";
         ev = EventSystem.current;
         first.Select();
     }
